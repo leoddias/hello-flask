@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+    api:
+        image: hello-flask
+        container_name: hello-flask-api
+        build: .
+        ports:
+           - 80:5000
+        environment:
+          - consumer_key=
+          - consumer_secret=
+          - access_token_key=
+          - access_token_secret=
