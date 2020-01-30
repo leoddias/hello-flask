@@ -25,6 +25,8 @@ api = twitter.Api(consumer_key=os.getenv('consumer_key'),
 @app.route("/tag/<string:search_tag>/")
 def GetByTag(search_tag):
 
+    result_json = ''
+
     if search_tag is None:
         logger.error("Empty", extra={'function': 'GetByTag', 'latency': 0})
         return '', status.HTTP_204_NO_CONTENT
@@ -52,6 +54,7 @@ def GetByTag(search_tag):
 def HighFollower():
 
     data = []
+    result_json = ''
 
     start_time = time.time()
 
