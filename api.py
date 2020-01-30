@@ -13,3 +13,6 @@ def GetByTag(search_tag):
 
     result_json = api.GetSearch(raw_query="q="+search_tag+"&result_type=recent&count=100", return_json=True)
     print(result_json)
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port='5000')    
