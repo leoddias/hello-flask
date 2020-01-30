@@ -29,13 +29,20 @@ def GetByTag(search_tag):
         logger.error("Empty", extra={'function': 'GetByTag', 'latency': 0})
         return '', status.HTTP_204_NO_CONTENT
 
+    start_time = time.time()
+
     try:
         result_json = api.GetSearch(raw_query="q="+search_tag+"&result_type=recent&count="+G_MAX_SEARCH, return_json=True)
     except:
-        logger.error("Unknown", extra={'function': 'GetByTag', 'latency': 0})
+        stop_time = time.time()
+        latency = stop_time - start_time 
+        logger.error("Unknown", extra={'function': 'GetByTag', 'latency': latency})
         return '', status.HTTP_500_INTERNAL_SERVER_ERROR
 
-    logger.info(search_tag, extra={'function': 'GetByTag', 'latency': 0})
+    stop_time = time.time()
+    latency = stop_time - start_time 
+
+    logger.info(search_tag, extra={'function': 'GetByTag', 'latency': latency})
 
     return result_json, status.HTTP_200_OK
 
@@ -45,6 +52,8 @@ def GetByTag(search_tag):
 def HighFollower():
 
     data = []
+
+    start_time = time.time()
 
     try:
         for tag in given_tags :    
@@ -61,13 +70,18 @@ def HighFollower():
                     "tag": tag
                 })
     except:
-        logger.error("Unknown", extra={'function': 'HighFollower', 'latency': 0})
+        stop_time = time.time()
+        latency = stop_time - start_time 
+        logger.error("Unknown", extra={'function': 'HighFollower', 'latency': latency})
         return '', status.HTTP_500_INTERNAL_SERVER_ERROR            
+
+    stop_time = time.time()
+    latency = stop_time - start_time 
 
     #Top 5 followed users
     top_users_json = sorted(data, key = lambda usr: usr['followers'], reverse=True)[:G_MAX_USERS] 
 
-    logger.info(top_users_json, extra={'function': 'HighFollower', 'latency': 0})
+    logger.info(top_users_json, extra={'function': 'HighFollower', 'latency': latency})
 
     return { 'result': top_users_json }, status.HTTP_200_OK           
     
