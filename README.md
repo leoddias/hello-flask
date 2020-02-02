@@ -16,5 +16,5 @@ Let's try flask, twitter api and graylog
 
 | Method   | URI                 | Name         | Description                                                          |
 |----------|---------------------|--------------|----------------------------------------------------------------------|
-| GET-HEAD | /tag/<string>       | GetByTag     | Get the last 100 tweets by tag                                       |
+| GET-HEAD | /tag/STRING         | GetByTag     | Get the last 100 tweets by tag                                       |
 | GET-HEAD | /highfollower       | HighFollower | Get top 5 followed users from tweets given by a static array of tags |
