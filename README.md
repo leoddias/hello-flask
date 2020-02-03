@@ -22,3 +22,7 @@ Let's try flask, twitter api and graylog
 # Architecture Design
 
 ![](https://raw.githubusercontent.com/leoddias/hello-flask/master/design.png)
+
+# Graylog Dashboard
+
+![](https://raw.githubusercontent.com/leoddias/hello-flask/master/dashboard.png)
