@@ -4,7 +4,7 @@ services:
     api:
         image: hello-flask
         container_name: hello-flask-api
-        build: .
+        build: ./src
         ports:
            - 80:5000
         environment:

@@ -9,8 +9,8 @@ Let's try flask, twitter api and graylog
 - First, check docker-compose file, add you own twitter keys (lines 11~14);
 - In docker-compose file, edit the graylog external uri (line 47) 
 - ./run.sh
-- Access graylog in your browser and install content_pack.json
-- Import postman_collection.json in your postman
+- Access graylog in your browser and install [extras/content_pack.json](https://raw.githubusercontent.com/leoddias/hello-flask/master/extras/content_pack.json)
+- (Optional) Import [extras/postman_collection.json](https://raw.githubusercontent.com/leoddias/hello-flask/master/extras/postman_collection.json) in your postman to make api calls
 
 # API Routes
 
@@ -21,8 +21,8 @@ Let's try flask, twitter api and graylog
 
 # Architecture Design
 
-![](https://raw.githubusercontent.com/leoddias/hello-flask/master/design.png)
+![](https://raw.githubusercontent.com/leoddias/hello-flask/master/images/design.png)
 
 # Graylog Dashboard
 
-![](https://raw.githubusercontent.com/leoddias/hello-flask/master/dashboard.png)
+![](https://raw.githubusercontent.com/leoddias/hello-flask/master/images/dashboard.png)
