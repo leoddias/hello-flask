@@ -1,4 +1,7 @@
 # hello-flask
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0ab9a2bf727a45c491f35006fd195914)](https://app.codacy.com/manual/leoddias/hello-flask?utm_source=github.com&utm_medium=referral&utm_content=leoddias/hello-flask&utm_campaign=Badge_Grade_Dashboard)
+
 Let's try flask, twitter api and graylog
 
 # Requirements
